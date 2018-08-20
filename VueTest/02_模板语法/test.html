@@ -31,12 +31,30 @@
 
 <div id="app">
   <h2>1. 双大括号表达式</h2>
+  <p>{{msg}}</p>
+  <p>{{msg.toUpperCase()}}</p>
 
   <h2>2. 指令一: 强制数据绑定</h2>
+  <a :href="url">访问指定站点</a> <br/>
 
   <h2>3. 指令二: 绑定事件监听</h2>
+  <button @click="handleClick">点我</button>
 
 </div>
-
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript">
+  new Vue({
+      el:"#app",
+      data:{
+          msg:'zhiang',
+          url:'http://www.baidu.com'
+      },
+      methods:{
+          handleClick (){
+              alert('点击处理')
+          }
+      }
+  })
+</script>
 </body>
 </html>

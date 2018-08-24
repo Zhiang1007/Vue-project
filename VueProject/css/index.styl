@@ -1,0 +1,51 @@
+@import "reset.css"
+//定义变量，主题色
+$topic_col= #02a774
+  html,body
+    overflow hidden
+  #app
+    width: 100%
+    height: 100%
+    //background: pink;
+    .nav
+      position relative
+      width: 100%
+      height: 100%
+      >section
+        position absolute
+        top: 0
+        left:0
+        width: 100%
+        height: 100%
+        display:none
+        &.wm
+          display: block
+          font-size: 50px
+    .search
+      width: 100%
+      height: 150px
+      top: 0
+      left: 0
+      background: skyblue
+
+  .footer
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 150px
+    position: fixed
+    background: #fff
+    display: flex
+    .footer_wm
+      display: flex
+      flex 1 //等分布局
+      flex-direction column //垂直排列
+      align-items center   //水平方向居中
+      justify-content center   //垂直方向居中
+      &.topic_col
+        color $topic_col
+      .iconfont
+        font-size 65px
+      >span
+        font-size 35px
+        margin-top  10px
